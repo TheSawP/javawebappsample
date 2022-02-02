@@ -15,7 +15,7 @@ node {
     }
   
     stage('build') {
-      sh 'apt-get install -y maven'
+      sh 'sudo apt-get install -y maven'
       sh 'mvn clean package'
     }
   
