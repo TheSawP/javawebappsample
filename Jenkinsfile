@@ -15,7 +15,8 @@ node {
     }
   
     stage('build') {
-      bat 'mvn clean package'
+      sh 'apt-get install -y maven'
+      sh 'mvn clean package'
     }
   
     stage('deploy') {
