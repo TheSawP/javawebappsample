@@ -14,10 +14,7 @@ node {
       checkout scm
     }
   
-    stage('build') {
-      sh 'sudo apt-get install -y maven'
-      sh 'mvn clean package'
-    }
+  
   
     stage('deploy') {
       def resourceGroup = 'Jenkins'
